@@ -1,0 +1,92 @@
+/*regla CSS*/
+
+* { /*selector universal*/
+    margin:0;
+    padding:0;
+    border:3px solid yellow;
+}
+
+
+h1 {
+    color: dodgerblue;
+    background-color: darkviolet;
+    border: 2px solid black;
+    text-align:center;
+}
+
+a{
+    color: whitesmoke;
+    border: 1px solid blue;
+    border-top: 3px dashed palegreen;
+    border-left: 6px solid rebeccapurple;
+    border-right: 5px double blue;
+    padding: 15px;
+    padding-left: 5px;
+    margin: 10px;
+    background-color:lightskyblue;
+    background-image: url(../img/fondo.jpg);
+    background-repeat: repeat-Y; /*tamaño imagen*/
+    background-position: 50% 16%; /*posición imagen*/ /*porcentajes horizontal-vertical*/
+}
+
+p {
+    color: violet;
+    font-size: 18px;
+    font-style: normal;
+    font-variant:normal;
+    font-weight:bold;
+    font-family:'Times New Roman', Times, serif;
+    text-decoration:overline yellowgreen;
+    text-transform:capitalize;
+
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    text-align:justify;
+    line-height: 2;
+    text-indent: 16px; /*sangria en la primera linea*/
+
+    border: 2px solid red; /*borde parrafos*/
+    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 80px;
+    margin: 50px; /*margenes*/
+    padding: 35px; /*margen del texto al borde*/
+    border-radius: 5px;
+    box-shadow: -5px 3px black; 
+    /*background-image: url(../img/10-texturas-gratuitas.webp);*/
+}
+
+img {
+    border: 2px solid royalblue;
+    width: 100px;
+    padding: 10px;
+    box-shadow: -6px -10px gold;
+    border-radius: 30px;
+    margin-left: 15px;
+}
+
+input {
+    color: slateblue;
+    padding: 10px;
+    border-radius: 10px;
+    background-image: url(../img/fondo.jpg);
+}
+
+article p {
+    background-color:cyan;
+    background-image: none;
+}
+
+div p {
+    background-color: crimson;
+    color:yellow
+}
+
+nav a {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: rgba(255,0,0,0);
+}
