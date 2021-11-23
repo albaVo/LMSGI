@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: lightgray;
+    height: 200px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+header #top {
+    background-color: red;
+    /*display: flex;
+    flex-flow: column nowrap;*/
+}
+
+header #top #sociales {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+header #top #sociales i {
+    padding: 15px;
+    font-size: 17px;
+    color: grey;
+}
+
+header #top #contacto {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+header #top #contacto #telefono {
+    padding: 20px;
+    color: blue;
+}
+
+header #top #contacto #telefono i {
+    color: indigo;
+}
+
+header #top #contacto #telefono a {
+    text-decoration: none;
+    color: indigo;
+}
+
+header #top #contacto #login {
+    padding: 20px;
+    color: blue;
+}
+
+header #top #contacto #login i {
+    color: indigo;
+}
+
+header #main {
+   background-color: blue;
+}
+
+header #bottom {
+   background-color: green;
+}
+
+main {
+    
+}
+
+main h2 {
+
+}
+
+main section {
+
+}
+
+main section article {
+
+}
