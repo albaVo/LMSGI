@@ -5,7 +5,7 @@ header figure {
 }
 
 header figure img {
-    height: 100px;
+    height: 90px;
 }
 
 header h1 {
@@ -16,8 +16,61 @@ header h1 {
 header nav {
     width: 100%;
     order: 3;
+    justify-content: space-around;
+}
+
+header nav a {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
 }
 
 header nav a i {
-    display: block;
+    display: block !important;
+    order: 2;
+}
+
+header nav a span {
+    order: 1;
+}
+
+main nav {
+    width: 10%;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+main section {
+    width: 70%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+main section h2 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+main section article {
+    width: 70%;
+}
+
+main aside {
+    width: 20%;
+}
+
+footer {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+footer #mapa {
+    width: 50%;
+    order: 2;
+}
+
+footer #sociales {
+    width: 50%;
+    order: 1;
 }
