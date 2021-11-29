@@ -3,15 +3,14 @@ header > i {
 }
 
 header h1 {
-    order: 2;
     width: 30%;
+    order: 2;
 }
 
 header nav {
     order: 1;
     width: 70%;
     flex-direction: row;
-    flex-flow: row nowrap;
 }
 
 main {
@@ -20,13 +19,15 @@ main {
 }
 
 main nav {
+    order: 1;
     flex-direction: row;
     justify-content: space-around;
     width: 90%;
 }
 
 main section {
-    width: 70%;
+    order: 3;
+    width: 80%;
     flex-flow: row wrap;
     justify-content: space-around;
     background-color: orange;
@@ -41,8 +42,9 @@ main section article {
 }
 
 main aside {
-    display: block;
+    order: 2;
     width: 20%;
+    display: block;
     background-color: green;
 }
 

@@ -44,12 +44,12 @@ main nav {
 main section {
     width: 70%;
     flex-flow: row wrap;
-    justify-content: space-around;
 }
 
 main section h2 {
     width: 100%;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 main section article {
@@ -57,12 +57,13 @@ main section article {
 }
 
 main aside {
+    order: 3;
     width: 20%;
 }
 
 footer {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 }
 
 footer #mapa {
