@@ -47,4 +47,22 @@ const potencia = (b, e) => {
     }
     return res;
 }
-console.log(potencia (2,4));
+//console.log(potencia (2,4));
+
+// sumar los 10 primeros números
+const suma10 = ( n ) => {
+    let stotal = 0;
+    for(i = 0; i <= n; i++){
+        stotal = stotal + i;
+    }
+    return stotal;
+}
+console.log(suma10( 2 ));
+console.log(suma10(5));
+console.log(suma10(100));
+
+// calcular el factorial de un número
+const factorial ( n ) => {
+
+}
+console.log (factorial (5));
