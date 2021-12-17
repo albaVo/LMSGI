@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+header {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    box-shadow: -3px 3px 3px gainsboro;
+    position: sticky;
+    z-index: 100;
+    top: 0px;
+    
+}
+
+header nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-family: playfair;
+    font-size: 20px;
+    width: 45%;
+}
+
+header nav a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+main {
+    margin: 20px;
+    margin-top: 0px;
+}
+
+main h2.start::before {
+    content: "<";
+}
+
+main h2.start::after {
+    content: ">";
+}
+
+main h2.end::before {
+    content: "</";
+}
+
+main h2.end::after {
+    content: ">";
+}
+
+main div#home {
+    height: 400px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    border: 1px solid red;
+}
+
+main #home h1 {
+    color: white;
+}
+
+main #home figure img {
+    width: 250px;
+}
+
+
+main div#presentacion {
+    border: 1px solid purple;
+    margin-top: 2px;
+}
+
+main #presentacion h2 {
+    color: rgb(69, 0, 213);
+}
+
+main #presentacion section {
+    display: flex;
+    flex
+}
+
+main #presentacion section article {
+
+}
+
+main #presentacion p {
+    color: white;
+}
+
+main #presentacion section figure {
+
+}
+
+main #presentacion img {
+    width: 250px;
+}
