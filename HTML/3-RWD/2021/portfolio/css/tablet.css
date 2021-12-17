@@ -1,0 +1,13 @@
+header nav {
+    flex-flow: row nowrap;
+}
+
+header nav a {
+    padding: 30px;
+}
+
+
+main div#home { 
+    justify-content: center;
+    padding: 50px;
+}

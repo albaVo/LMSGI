@@ -42,25 +42,30 @@ header nav a:hover {
 
 
 
+
 main {
-    margin: 20px;
+    margin: 30px;
     margin-top: 0px;
 }
 
 main h2.start::before {
     content: "<";
+    font-family: inconsolata, monospace; 
 }
 
 main h2.start::after {
     content: ">";
+    font-family: inconsolata, monospace; 
 }
 
 main h2.end::before {
     content: "</";
+    font-family: inconsolata, monospace; 
 }
 
 main h2.end::after {
     content: ">";
+    font-family: inconsolata, monospace; 
 }
 
 main div#home {
@@ -68,7 +73,8 @@ main div#home {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    border: 1px solid red;
+    margin-top: 25px;
+    padding: 20px;
 }
 
 main #home h1 {
@@ -80,32 +86,196 @@ main #home figure img {
 }
 
 
+
 main div#presentacion {
-    border: 1px solid purple;
-    margin-top: 2px;
+    height: 100%;
+    margin-top: 150px;
 }
 
 main #presentacion h2 {
     color: rgb(69, 0, 213);
+    font-size: 25px;
 }
 
 main #presentacion section {
     display: flex;
-    flex
-}
-
-main #presentacion section article {
-
+    flex-flow: row nowrap;
+    align-items: center;
+    margin-top: 18px;
+    margin-bottom: 18px;
 }
 
 main #presentacion p {
     color: white;
+    font-family: 'open sans', sans-serif;
 }
 
-main #presentacion section figure {
+main #presentacion p:first-child {
+    font-style: italic;
+    font-size: 24px;
+    color: rgb(1, 166, 196);
+}
 
+main #presentacion p:nth-of-type(3) {
+    font-size: 18px;
+    color: rgb(233, 162, 104);
+}
+
+main #presentacion p:nth-child(3) {
+    font-size: 18px;
+    color: rgb(233, 162, 104)
+}
+
+main #presentacion p:last-child {
+    font-size: 16px;
+    color: rgb(1, 166, 196);
 }
 
 main #presentacion img {
-    width: 250px;
+    width: 200px;
+}
+
+
+
+main div#servicios {
+    height: 100%;
+    margin-top: 150px;
+}
+
+main #servicios h2 {
+    color: rgb(1, 166, 196);
+    font-size: 25px;
+}
+
+main #servicios div {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+main #servicios p {
+    color: white;
+    font-family: 'open sans', sans-serif;
+}
+
+main #servicios p:first-child {
+    font-style: italic;
+    font-size: 24px;
+    color: rgb(69, 0, 213);
+
+}
+
+main #servicios p:nth-child(3) {
+    font-size: 18px;
+    color: rgb(233, 162, 104)
+}
+
+main #servicios p:last-child {
+    font-size: 16px;
+    color: rgb(69, 0, 213);
+}
+
+
+
+main div#trabajos {
+    height: 100%;
+    margin-top: 150px;
+}
+
+main #trabajos h2 {
+    color: rgb(233, 162, 104);
+    font-size: 25px;
+}
+
+main #trabajos div {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+main #trabajos p {
+    color: white;
+    font-family: 'open sans', sans-serif;
+}
+
+main #trabajos p:first-child {
+    font-style: italic;
+    font-size: 24px;
+    color: rgb(69, 0, 213);
+
+}
+
+main #trabajos p:nth-child(3) {
+    font-size: 18px;
+    color: rgb(1, 166, 196);
+}
+
+main #trabajos p:last-child {
+    font-size: 16px;
+    color: rgb(69, 0, 213);
+}
+
+
+
+main div#formacion {
+    height: 100%;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+main #formacion h2 {
+    color: rgb(69, 0, 213);
+    font-size: 25px;
+}
+
+main #formacion nav {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+main #formacion nav i {
+    font-size: 18px;
+    color: rgb(1, 166, 196);
+    
+}
+
+main #formacion nav span {
+    font-size: 18px;
+    color: white;
+}
+
+
+
+
+footer {
+    background-color: black;
+    box-shadow: 3px -3px 3px gainsboro;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+footer a {
+    margin: auto;
+    text-decoration: none;
+}
+
+footer a i {
+    font-size: 25px;
+    padding: 20px;
+}
+
+footer a:nth-child(1) {
+    color: fuchsia;
+}
+
+footer a:nth-child(2) {
+    color: cyan;
+}
+
+footer a:nth-child(3) {
+    color: blue;
+}
+
+footer a:nth-child(4) {
+    color: forestgreen;
 }

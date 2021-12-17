@@ -1,0 +1,29 @@
+main div#home { 
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+main #home figure img {
+    width: 350px;
+}
+
+
+main div#presentacion {
+    margin-top: 280px;
+}
+
+main #presentacion section article {
+    width: 80%;
+}
+
+main #presentacion section figure {
+    width: 20%;
+}
+
+main div#servicios {
+    margin-right: 85px;
+}
+
+main div#trabajos {
+    margin-right: 85px;
+}
