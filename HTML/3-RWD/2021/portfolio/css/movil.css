@@ -95,6 +95,7 @@ main div#presentacion {
 main #presentacion h2 {
     color: rgb(69, 0, 213);
     font-size: 25px;
+    font-family: inconsolate, monospace;
 }
 
 main #presentacion section {
@@ -145,6 +146,7 @@ main div#servicios {
 main #servicios h2 {
     color: rgb(1, 166, 196);
     font-size: 25px;
+    font-family: inconsolate, monospace;
 }
 
 main #servicios div {
@@ -184,33 +186,35 @@ main div#trabajos {
 main #trabajos h2 {
     color: rgb(233, 162, 104);
     font-size: 25px;
+    font-family: inconsolate, monospace;
 }
 
-main #trabajos div {
+main #trabajos ul {
     margin-top: 18px;
     margin-bottom: 18px;
 }
 
-main #trabajos p {
+main #trabajos ul li {
     color: white;
-    font-family: 'open sans', sans-serif;
+    list-style: none;
+    font-family: inconsolata, monospace;
+    padding: 15px;
+    margin-bottom: 25px;
 }
 
-main #trabajos p:first-child {
-    font-style: italic;
-    font-size: 24px;
-    color: rgb(69, 0, 213);
-
-}
-
-main #trabajos p:nth-child(3) {
-    font-size: 18px;
+main #trabajos li:nth-of-type(odd) {
+    border: 1px solid rgb(69, 0, 213);
     color: rgb(1, 166, 196);
 }
 
-main #trabajos p:last-child {
-    font-size: 16px;
+main #trabajos li:nth-of-type(even) {
+    border: 1px solid rgb(1, 166, 196);
     color: rgb(69, 0, 213);
+}
+
+main #trabajos p {
+    font-family: 'open sans', sans-serif;
+    color: white;
 }
 
 
@@ -224,6 +228,7 @@ main div#formacion {
 main #formacion h2 {
     color: rgb(69, 0, 213);
     font-size: 25px;
+    font-family: inconsolate, monospace;
 }
 
 main #formacion nav {

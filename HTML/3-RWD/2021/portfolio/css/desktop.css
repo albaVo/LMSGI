@@ -3,6 +3,10 @@ main div#home {
     margin-top: 100px;
 }
 
+main #home h1 {
+    font-size: 65px;
+}
+
 main #home figure img {
     width: 350px;
 }

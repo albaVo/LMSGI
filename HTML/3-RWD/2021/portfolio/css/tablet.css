@@ -11,3 +11,7 @@ main div#home {
     justify-content: center;
     padding: 50px;
 }
+
+main #home h1 {
+    font-size: 40px;
+}
