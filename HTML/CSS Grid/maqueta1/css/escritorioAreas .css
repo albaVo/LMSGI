@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div.container {
+    display: grid;
+    min-height: 700px;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    border: 2px solid black;
+    grid-template-areas:
+        "fig menuP rec usu"
+        "fig tit2 tit2 tit2";
+}
+
+header figure {
+    border: 1px solid black;
+    grid-area: fig;
+}
+
+header figure img {
+    height: 100px;
+}
+
+header h2 {
+    border: 1px solid black;
+    grid-area: tit2;
+}
+
+header nav {
+    border: 1px solid black;
+    grid-area: menuP;
+}
+
+header #usuario {
+    border: 1px solid black;
+    grid-area: usu;
+}
+
+header #recogida {
+    border: 1px solid black;
+    grid-area: rec;
+}
