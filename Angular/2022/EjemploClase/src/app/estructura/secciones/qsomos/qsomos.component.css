@@ -1,0 +1,28 @@
+
+div#qsomos {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+}
+
+div#qsomos h3 {
+    width: 100%;
+}
+
+div#qsomos section {
+    width: 70%;
+}
+
+div#qsomos section p {
+    text-align: justify;
+    text-indent: .5cm;
+}
+
+div#qsomos figure {
+   width: 30%; 
+}
+
+
+div#qsomos figure img {
+    height: 100px;
+}
