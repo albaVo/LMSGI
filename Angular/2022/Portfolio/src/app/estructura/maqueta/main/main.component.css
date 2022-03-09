@@ -1,0 +1,25 @@
+main {
+    height: 530px;
+    margin: 30px;
+    margin-top: 0px;
+}
+
+main h2.start::before {
+    content: "<";
+    font-family: inconsolata, monospace; 
+}
+
+main h2.start::after {
+    content: ">";
+    font-family: inconsolata, monospace; 
+}
+
+main h2.end::before {
+    content: "</";
+    font-family: inconsolata, monospace; 
+}
+
+main h2.end::after {
+    content: ">";
+    font-family: inconsolata, monospace; 
+}

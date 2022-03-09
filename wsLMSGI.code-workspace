@@ -1,9 +1,11 @@
 {
     "folders": [
         {
+            "name": "LMSGI",
             "path": "."
         },
         {
+            "name": "RepoClaseLMSGI",
             "path": "..\\RepoClaseLMSGI"
         }
     ],

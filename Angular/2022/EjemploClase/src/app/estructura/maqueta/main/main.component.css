@@ -2,9 +2,9 @@ main {
     display: grid;
     height: 530px;
     background-color: rgba(0, 255, 0, .3);
-    grid-template-columns: 1.5fr 7fr 2fr;
+    grid-template-columns: 1fr;
     grid-template-areas: 
-        "menu cuerpo lateral";
+        "cuerpo";
 }
 
 app-main-menu {
