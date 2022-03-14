@@ -1,0 +1,64 @@
+div {
+  height: 100%;
+  margin-top: 25px;
+}
+
+h2 {
+  color: rgb(3, 99, 116);
+  font-size: 25px;
+  font-family: inconsolate, monospace;
+}
+
+section {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+section article p {
+  color: whitesmoke;
+  font-family: 'open sans', sans-serif;
+}
+
+p:first-child {
+  font-family: italic !important;
+  font-size: 24px !important;
+}
+
+p:nth-of-type(3) {
+  font-size: 18px !important;
+}
+
+p:nth-child(3) {
+  font-size: 18px !important;
+}
+
+p:last-child {
+  font-size: 16px !important;
+}
+
+div figure img {
+  width: 225px;
+}
+
+h2.start::before {
+  content: "<";
+  font-family: inconsolata, monospace;
+}
+
+h2.start::after {
+  content: ">";
+  font-family: inconsolata, monospace;
+}
+
+h2.end::before {
+  content: "</";
+  font-family: inconsolata, monospace;
+}
+
+h2.end::after {
+  content: ">";
+  font-family: inconsolata, monospace;
+}

@@ -1,18 +1,19 @@
-div#home {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 25px;
-    padding: 22px;
+div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 25px;
+  margin-right: 20px;
+  padding: 22px;
 }
 
-div#home h1 {
-    color: black;
-    font-size: 65px;
-    font-family: 'Playfair Display';
+div h1 {
+  color: black;
+  font-size: 65px;
+  font-family: 'Playfair Display';
 }
 
-div#home figure img {
-    width: 350px;
+div figure img {
+  width: 350px;
 }

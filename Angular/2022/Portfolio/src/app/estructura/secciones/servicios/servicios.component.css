@@ -1,0 +1,55 @@
+div {
+  height: 100%;
+  margin-top: 50px;
+}
+
+h2 {
+  color: rgb(105, 13, 105);
+  font-size: 25px;
+  font-family: inconsolate, monospace;
+}
+
+section {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  padding: 20px;
+}
+
+p {
+  color: whitesmoke;
+  font-family: 'open sans', sans-serif;
+}
+
+p:first-child {
+  font-style: italic !important;
+  font-size: 24px !important;
+}
+
+p:nth-child(3) {
+  font-size: 18px !important;
+}
+
+p:last-child {
+  font-size: 16px !important;
+}
+
+h2.start::before {
+  content: "<";
+  font-family: inconsolata, monospace;
+}
+
+h2.start::after {
+  content: ">";
+  font-family: inconsolata, monospace;
+}
+
+h2.end::before {
+  content: "</";
+  font-family: inconsolata, monospace;
+}
+
+h2.end::after {
+  content: ">";
+  font-family: inconsolata, monospace;
+}
+

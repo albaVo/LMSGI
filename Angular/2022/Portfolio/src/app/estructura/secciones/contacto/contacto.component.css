@@ -1,0 +1,21 @@
+div.container {
+  margin-top: 12px;
+  height: 100%;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+div.form-group {
+  margin-left: 300px;
+  padding: 5px;
+}
+
+button {
+  background-color: rgb(105,13,105);
+  border-color: blue;
+  margin-top: 30px;
+  margin-right: 300px;
+}

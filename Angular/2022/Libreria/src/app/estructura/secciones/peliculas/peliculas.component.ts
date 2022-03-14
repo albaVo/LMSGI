@@ -21,6 +21,7 @@ export class PeliculasComponent implements OnInit {
     this.peliculas = await this.peliculasService.getAll(this.pagina);
     console.log(this.peliculas);
     this.generos = await this.peliculasService.getAll(this.pagina);
+    console.log(this.generos)
   }
   async  getPagina(npagina: number){
    // this.pagina = npagina;
@@ -28,3 +29,5 @@ export class PeliculasComponent implements OnInit {
     console.log(this.peliculas);
   }
 }
+
+

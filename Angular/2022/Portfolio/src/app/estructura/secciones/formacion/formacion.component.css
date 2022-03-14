@@ -1,0 +1,49 @@
+div {
+  height: 100%;
+  margin-top: 50px;
+}
+
+h2 {
+  color: rgb(3, 99, 116);
+  font-size: 25px;
+  font-family: inconsolate, monospace;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+nav {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+nav i {
+  font-size: 18px;
+  color: rgba(5, 127, 148, 0.781);
+  margin-right: 10px;
+}
+
+nav span {
+  font-size: 18px;
+  color: white;
+}
+
+
+h2.start::before {
+  content: "<";
+  font-family: inconsolata, monospace;
+}
+
+h2.start::after {
+  content: ">";
+  font-family: inconsolata, monospace;
+}
+
+h2.end::before {
+  content: "</";
+  font-family: inconsolata, monospace;
+}
+
+h2.end::after {
+  content: ">";
+  font-family: inconsolata, monospace;
+}
