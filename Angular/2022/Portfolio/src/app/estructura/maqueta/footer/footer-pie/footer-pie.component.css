@@ -3,6 +3,11 @@ nav {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  position:fixed;
+  bottom:0px;
+  width:100%;
+  height: 65px;
+
 }
 
 a {
@@ -13,4 +18,20 @@ a {
 i {
   font-size: 25px;
   padding: 20px;
+}
+
+a:nth-child(1) {
+  color: fuchsia;
+}
+
+a:nth-child(2) {
+  color: cyan;
+}
+
+a:nth-child(3) {
+  color: blue;
+}
+
+a:nth-child(4) {
+  color: forestgreen;
 }

@@ -1,25 +1,26 @@
 main {
-    height: 530px;
-    margin: 30px;
-    margin-top: 0px;
+  height: 530px;
+  margin: 30px;
+  margin-top: 0px;
+  margin-bottom: 500px;
 }
 
 main h2.start::before {
-    content: "<";
-    font-family: inconsolata, monospace; 
+  content: "<";
+  font-family: inconsolata, monospace;
 }
 
 main h2.start::after {
-    content: ">";
-    font-family: inconsolata, monospace; 
+  content: ">";
+  font-family: inconsolata, monospace;
 }
 
 main h2.end::before {
     content: "</";
-    font-family: inconsolata, monospace; 
+    font-family: inconsolata, monospace;
 }
 
 main h2.end::after {
-    content: ">";
-    font-family: inconsolata, monospace; 
+  content: ">";
+  font-family: inconsolata, monospace;
 }
