@@ -7,9 +7,12 @@
         {
             "name": "RepoClaseLMSGI",
             "path": "..\\RepoClaseLMSGI"
+        },
+        {
+            "path": "..\\Examenes-LMSGI"
         }
     ],
     "settings": {
-        "liveServer.settings.multiRootWorkspaceName": "LMSGI"
+        "liveServer.settings.multiRootWorkspaceName": "RepoClaseLMSGI"
     }
 }
