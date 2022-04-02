@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { EstructuraRoutingModule } from './estructura-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -17,7 +19,8 @@ import { MainComponent } from './main/main.component';
   ],
   exports: [
     HeaderComponent,
-    MainComponent
+    MainComponent,
+    FooterComponent
   ]
 })
 export class EstructuraModule { }
