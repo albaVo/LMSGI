@@ -6,9 +6,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EstructuraModule } from './estructura/estructura.module';
 import { SeccionesModule } from './secciones/secciones.module';
-import { VistasModule } from './vistas/vistas.module';
 
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -19,9 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     EstructuraModule,
     SeccionesModule,
-    VistasModule,
-    FormsModule,
-    ReactiveFormsModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
