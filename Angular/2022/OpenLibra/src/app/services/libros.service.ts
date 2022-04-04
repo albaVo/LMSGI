@@ -1,3 +1,4 @@
+import { ICategoria } from './../interfaces/ILibros';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 
@@ -19,20 +20,21 @@ export class LibrosService {
     }),
     params: new HttpParams()
   };
+
   constructor( private http: HttpClient) { }
 
-  getCategorias() {
+  getCategorias(): Promise<ICategoria[]> {
     const url = `${this.api}`;
-
     const params = new HttpParams()
       .set ('get_categories', 'all');
     this.httpOptions.params = params;
 
-    this.http.get(url, this.httpOptions)
-     .subscribe (data => {
-       console.log(data)
-     })
-
+    return new Promise(resolve => {
+      this.http.get<ICategoria[]>(url, this.httpOptions)
+      .subscribe(data => {
+        resolve(data)
+      })
+    })
   }
 }
 

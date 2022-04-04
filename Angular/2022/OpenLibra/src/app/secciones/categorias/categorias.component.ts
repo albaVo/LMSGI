@@ -1,3 +1,5 @@
+import { LibrosService } from 'src/app/services/libros.service';
+import { ICategoria } from './../../interfaces/ILibros';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriasComponent implements OnInit {
 
-  constructor() { }
+  categorias: ICategoria[] = [];
+  constructor(private LibrosService: LibrosService) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.categorias = await this.LibrosService.getCategorias();
   }
 
 }
