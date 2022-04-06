@@ -1,10 +1,10 @@
-import { LobbyComponent } from './secciones/lobby/lobby.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'lobby', pathMatch: 'full' },
-  { path: 'lobby', component: LobbyComponent },
+  { path: 'lobby', loadChildren: () => import('./secciones/secciones.module')
+                          .then (m => m.SeccionesModule)},
 ];
 
 @NgModule({

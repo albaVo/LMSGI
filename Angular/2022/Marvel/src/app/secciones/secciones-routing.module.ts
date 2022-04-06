@@ -9,11 +9,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  { path: '', component: LobbyComponent },
   { path: 'characters', component: CharactersComponent},
   { path: 'comics', component: ComicsComponent },
   { path: 'creators', component: CreatorsComponent },
   { path: 'events', component: EventsComponent },
-  { path: 'lobby', component: LobbyComponent },
   { path: 'series', component: SeriesComponent },
   { path: 'stories', component: StoriesComponent }
 ];

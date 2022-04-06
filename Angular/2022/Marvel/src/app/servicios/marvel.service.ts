@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class MarvelService {
   private api = 'http(s)://gateway.marvel.com/';
 
   constructor(private http: HttpClient) { }
