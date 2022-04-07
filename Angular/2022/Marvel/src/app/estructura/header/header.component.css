@@ -1,28 +1,68 @@
+@media screen and (max-width: 770px) {
+  header {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: black;
+    height: 300px;
+  }
 
-header {
-  display: flex;
-  flex-flow: row nowrap;
-  background-color: black;
-  align-items: center;
-  height: 130px;
+  a.logo {
+    height: 40%;
+    width: 100%;
+  }
+
+  img {
+    height: 140%;
+    width: 200px;
+    margin-left: 150px;
+  }
+
+  ul {
+    height: 60%;
+  }
+
+  a.nav-link {
+    color: white;
+    font-family: Roboto Condensed;
+    font-size: 22px;
+    padding: 30px;
+  }
+
+  a.nav-link:hover {
+    color: red;
+  }
 }
 
-a {
-  width: 15%;
-}
+@media screen and (min-width: 800px) {
+  header {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: black;
+    align-items: center;
+    height: 130px;
+  }
 
-img {
-  width: 100%;
-  margin-left: 30px;
-}
+  a {
+    width: 15%;
+    margin-left: 40px;
+  }
 
-ul {
-  width: 85%;
-}
+  img {
+    width: 100%;
+  }
 
-a {
-  color: white;
-  font-family: Roboto Condensed;
-  font-size: 22px;
-  padding: 30px;
+  ul {
+    width: 85%;
+  }
+
+  a.nav-link {
+    color: white;
+    font-family: Roboto Condensed;
+    font-size: 22px;
+    padding: 25px;
+  }
+
+  a.nav-link:hover {
+    color: red;
+  }
 }

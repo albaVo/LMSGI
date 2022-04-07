@@ -1,17 +1,7 @@
-import { ɵassignExtraOptionsToRouter } from "@angular/router";
-
 export interface ICharacter  {
  id: string;
  name: string;
  description: string;
- modified: Date;
- resourceURL: string;
- urls: string;
- thumbnail: ImageBitmap;
- comics: string;
- stories: string;
- events: string;
- series: string;
 }
 
 export interface IUrl {
@@ -28,12 +18,19 @@ export interface IComicList {
   available: string;
   returned: string;
   collectionURL: string;
-  items: string;
+  items: IComicSummary[];
 }
 
 export interface IComicSummary {
   resourceURL: string;
   name: string;
+}
+
+export interface IStoryList {
+  avaliable: string;
+  returned: string;
+  collectionURL: string;
+  items: IStorySummary[];
 }
 
 export interface IStorySummary {
@@ -46,12 +43,22 @@ export interface IEventList {
   available: string;
   returned: string;
   collectionURL: string;
-  items: string;
+  items: IEventSummary[];
+}
+
+export interface IEventSummary {
+  resourceURL: string;
+  name: string;
+}
+
+export interface ISeriesList {
+  available: string;
+  returned: string;
+  collectionURL: string;
+  items: ISeriesSummary[];
 }
 
 export interface ISeriesSummary {
  esourceURL: string;
  name: string;
 }
-
-ɵassignExtraOptionsToRouter

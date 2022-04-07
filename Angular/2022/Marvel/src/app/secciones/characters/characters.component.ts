@@ -1,4 +1,6 @@
+import { MarvelService } from './../../servicios/marvel.service';
 import { Component, OnInit } from '@angular/core';
+import { ICharacter } from 'src/app/interfaces/characters.interface';
 
 @Component({
   selector: 'app-characters',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharactersComponent implements OnInit {
 
-  constructor() { }
+  characters: ICharacter[] = [];
+  constructor(private MarvelService: MarvelService) {}
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.characters = await this.MarvelService.getCharacter();
   }
 
 }
