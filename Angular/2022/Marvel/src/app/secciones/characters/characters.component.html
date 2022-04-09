@@ -1,3 +1,42 @@
-<h1>MARVEL CHARACTERS</h1>
+<header>
+  <h1>CHARACTERS</h1>
+  <nav>
+    <a>
+      <i class="fas fa-search"></i>
+    </a>
+    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Search Character">
+    <datalist id="datalistOptions">
+      <option *ngFor="let character of characters | async" value="{{character.name}}">
+    </datalist>
+  </nav>
+</header>
+
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">ID</th>
+        <th scope="col">NAME</th>
+        <th scope="col">DESCRIPTION</th>
+        <th scope="col">DETAILS</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let character of characters | async">
+      <tr>
+        <th scope="row"><img src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}"></th>
+        <td data-titulo="ID">{{character.id}}</td>
+        <td data-titulo="NAME"> {{character.name}}</td>
+        <td data-titulo="DESCRIPTION">{{character.description}}</td>
+        <td data-titulo="DETAILS">
+          <a href="{{character.urls[0].url}}" target="_blank">
+            <i class="fas fa-info-circle"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
 
 

@@ -1,1 +1,43 @@
-<p>comics works!</p>
+<header>
+  <h1>COMICS</h1>
+  <nav>
+    <a>
+      <i class="fas fa-search"></i>
+    </a>
+    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Search Character">
+    <datalist id="datalistOptions">
+      <option *ngFor="let comic of comics | async" value="{{comic.title}}">
+    </datalist>
+  </nav>
+</header>
+
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">ID</th>
+        <th scope="col">TITLE</th>
+        <th scope="col">DESCRIPTION</th>
+        <th scope="col">FORMAT</th>
+        <th scope="col">PAGE COUNT</th>
+        <th scope="col">DETAILS</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let comic of comics | async">
+      <tr>
+        <th scope="row"><img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}"></th>
+        <td data-titulo="ID">{{comic.id}}</td>
+        <td data-titulo="TITLE">{{comic.title}}</td>
+        <td data-titulo="DESCRIPTION">{{comic.description}}</td>
+        <td data-titulo="FORMAT">{{comic.format}}</td>
+        <td data-titulo="PAGE COUNT">{{comic.pageCount}}</td>
+        <td data-titulo="DETAILS">
+          <a href="{{comic.urls[0].url}}" target="_blank">
+            <i class="fas fa-info-circle"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>

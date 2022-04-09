@@ -1,40 +1,33 @@
-import { ICharacter } from './../interfaces/characters.interface';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MarvelService {
-  private api = 'http://gateway.marvel.com/';
 
-  private params =
-    new HttpParams()
-      .set('ts', '1')
-      .set('apikey', 'f752ac4dcbde02d1858064dbb5f2ecfd')
-      .set('hash', '15f02b02aa52896e2d9c60f0df46bdd7')
+  api_key = 'f752ac4dcbde02d1858064dbb5f2ecfd';
+  hash = '15f02b02aa52896e2d9c60f0df46bdd7';
+  url1 = `http://gateway.marvel.com/v1/public/characters?ts=1&apikey=${this.api_key}&hash=${this.hash}`;
+  url2 = `http://gateway.marvel.com/v1/public/comics?ts=1&apikey=${this.api_key}&hash=${this.hash}`;
+  url3 = `http://gateway.marvel.com/v1/public/events?ts=1&apikey=${this.api_key}&hash=${this.hash}`;
 
-  private httpOptions = {
-    headers: new HttpHeaders({
-      'Accept' : 'application/jason',
-    }),
-    params: this.params
-  };
+ constructor(private http: HttpClient) { }
 
-  constructor(private http: HttpClient) { }
+  getCharacters(): Observable<any> {
+    return this.http.get<any>(this.url1)
+      .pipe(map((data: any) => data.data.results))
+  }
 
-  async getCharacter(): Promise<ICharacter>{
-    const prefix = '/v1/public/characters';
-    const ts = '1';
-    const apikey = 'f752ac4dcbde02d1858064dbb5f2ecfd';
-    const hash = '15f02b02aa52896e2d9c60f0df46bdd7';
-    const url = `${this.api}/${prefix}/${ts}/${apikey}/${hash}`
-    return new Promise (resolve => {
-      this.http.get<ICharacter[]>(url, this.httpOptions)
-        .subscribe (data => {
-          console.log(data);
-          resolve(data)
-        })
-    })
+  getComics(): Observable<any> {
+    return this.http.get<any>(this.url2)
+    .pipe(map((data: any) => data.data.results))
+  }
+
+  getEvents(): Observable<any> {
+    return this.http.get<any>(this.url3)
+    .pipe(map((data: any) => data.data.results))
   }
 }
+

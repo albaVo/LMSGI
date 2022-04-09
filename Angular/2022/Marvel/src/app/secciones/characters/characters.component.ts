@@ -1,6 +1,6 @@
+import { Observable } from 'rxjs';
 import { MarvelService } from './../../servicios/marvel.service';
 import { Component, OnInit } from '@angular/core';
-import { ICharacter } from 'src/app/interfaces/characters.interface';
 
 @Component({
   selector: 'app-characters',
@@ -9,11 +9,16 @@ import { ICharacter } from 'src/app/interfaces/characters.interface';
 })
 export class CharactersComponent implements OnInit {
 
-  characters: ICharacter[] = [];
-  constructor(private MarvelService: MarvelService) {}
+  constructor(private MarvelService: MarvelService) { }
 
-  async ngOnInit() {
-    this.characters = await this.MarvelService.getCharacter();
+  characters!: Observable<any>;
+
+  ngOnInit(): void {
+    this.getCharacters();
+  }
+
+  getCharacters() {
+    this.characters = this.MarvelService.getCharacters();
   }
 
 }
