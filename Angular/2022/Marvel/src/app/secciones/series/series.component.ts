@@ -1,3 +1,5 @@
+import { Observable } from 'rxjs';
+import { MarvelService } from './../../servicios/marvel.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SeriesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private MarvelService: MarvelService) { }
+
+  series!: Observable<any>;
 
   ngOnInit(): void {
+    this.getSeries();
+  }
+
+  getSeries() {
+    this.series = this.MarvelService.getSeries();
   }
 
 }

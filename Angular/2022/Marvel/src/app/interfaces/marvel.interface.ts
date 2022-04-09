@@ -15,8 +15,19 @@ export interface IComic {
 }
 
 export interface IEvent {
-  id: string;
+  id: number;
   title: string;
   description: string;
   thumbnail: ImageBitmap;
 }
+
+export interface ISeries {
+  id: number;
+  title: string;
+  description: string;
+  thumbnail: ImageBitmap;
+  startYear: number;
+  endYear: number;
+  rating: string;
+}
+

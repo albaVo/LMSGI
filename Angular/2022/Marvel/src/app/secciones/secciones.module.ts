@@ -6,7 +6,6 @@ import { CharactersComponent } from './characters/characters.component';
 import { ComicsComponent } from './comics/comics.component';
 import { EventsComponent } from './events/events.component';
 import { SeriesComponent } from './series/series.component';
-import { StoriesComponent } from './stories/stories.component';
 import { LobbyComponent } from './lobby/lobby.component';
 
 
@@ -16,7 +15,6 @@ import { LobbyComponent } from './lobby/lobby.component';
     ComicsComponent,
     EventsComponent,
     SeriesComponent,
-    StoriesComponent,
     LobbyComponent
   ],
   imports: [

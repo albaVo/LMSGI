@@ -1,1 +1,40 @@
-<p>events works!</p>
+<header>
+  <h1>EVENTS</h1>
+  <nav>
+    <a>
+      <i class="fas fa-search"></i>
+    </a>
+    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Search Event">
+    <datalist id="datalistOptions">
+      <option *ngFor="let event of events | async" value="{{event.title}}">
+    </datalist>
+  </nav>
+</header>
+
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">ID</th>
+        <th scope="col">TITLE</th>
+        <th scope="col">DESCRIPTION</th>
+        <th scope="col">DETAILS</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let event of events | async">
+      <tr>
+        <th scope="row"><img src="{{event.thumbnail.path}}.{{event.thumbnail.extension}}"></th>
+        <td data-titulo="ID">{{event.id}}</td>
+        <td data-titulo="TITLE">{{event.title}}</td>
+        <td data-titulo="DESCRIPTION">{{event.description}}</td>
+        <td data-titulo="DETAILS">
+          <a href="{{event.urls[0].url}}" target="_blank">
+            <i class="fas fa-info-circle"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+

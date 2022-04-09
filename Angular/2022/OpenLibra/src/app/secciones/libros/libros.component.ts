@@ -20,11 +20,11 @@ export class LibrosComponent implements OnInit {
     this.categorias = await this.librosService.getCategorias();
   }
 
-  async getLibrosCategory(codigo: number) {
+  /*async getLibrosCategory(codigo: number) {
     let libros: ILibro[] = [];
     console.log(codigo, 'desde el controlador/componente');
     this.libros = await this.librosService.getCategorias();
     console.log(this.libros)
-  }
+  }*/
 
 }

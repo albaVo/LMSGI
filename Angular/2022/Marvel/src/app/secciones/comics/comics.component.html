@@ -4,7 +4,7 @@
     <a>
       <i class="fas fa-search"></i>
     </a>
-    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Search Character">
+    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Search Comic">
     <datalist id="datalistOptions">
       <option *ngFor="let comic of comics | async" value="{{comic.title}}">
     </datalist>

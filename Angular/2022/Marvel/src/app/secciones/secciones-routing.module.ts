@@ -1,4 +1,3 @@
-import { StoriesComponent } from './stories/stories.component';
 import { SeriesComponent } from './series/series.component';
 import { LobbyComponent } from './lobby/lobby.component';
 import { EventsComponent } from './events/events.component';
@@ -12,8 +11,7 @@ const routes: Routes = [
   { path: 'characters', component: CharactersComponent},
   { path: 'comics', component: ComicsComponent },
   { path: 'events', component: EventsComponent },
-  { path: 'series', component: SeriesComponent },
-  { path: 'stories', component: StoriesComponent }
+  { path: 'series', component: SeriesComponent }
 ];
 
 @NgModule({

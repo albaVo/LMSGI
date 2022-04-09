@@ -1,1 +1,47 @@
-<p>series works!</p>
+<header>
+  <h1>SERIES</h1>
+  <nav>
+    <a>
+      <i class="fas fa-search"></i>
+    </a>
+    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Search Serie">
+    <datalist id="datalistOptions">
+      <option *ngFor="let serie of series | async" value="{{serie.title}}">
+    </datalist>
+  </nav>
+</header>
+
+<body>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">ID</th>
+        <th scope="col">TITLE</th>
+        <th scope="col">DESCRIPTION</th>
+        <th scope="col">START YEAR</th>
+        <th scope="col">END YEAR</th>
+        <th scope="col">RATING</th>
+        <th scope="col">DETAILS</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let serie of series | async">
+      <tr>
+        <th scope="row"><img src="{{serie.thumbnail.path}}.{{serie.thumbnail.extension}}"></th>
+        <td data-titulo="ID">{{serie.id}}</td>
+        <td data-titulo="TITLE">{{serie.title}}</td>
+        <td data-titulo="DESCRIPTION">{{serie.description}}</td>
+        <td data-titulo="START YEAR">{{serie.startYear}}</td>
+        <td data-titulo="END YEAR">{{serie.endYear}}</td>
+        <td data-titulo="RATING">{{serie.rating}}</td>
+        <td data-titulo="DETAILS">
+          <a href="{{serie.urls[0].url}}" target="_blank">
+            <i class="fas fa-info-circle"></i>
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+

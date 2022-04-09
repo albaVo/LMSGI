@@ -12,6 +12,8 @@ export class MarvelService {
   url1 = `http://gateway.marvel.com/v1/public/characters?ts=1&apikey=${this.api_key}&hash=${this.hash}`;
   url2 = `http://gateway.marvel.com/v1/public/comics?ts=1&apikey=${this.api_key}&hash=${this.hash}`;
   url3 = `http://gateway.marvel.com/v1/public/events?ts=1&apikey=${this.api_key}&hash=${this.hash}`;
+  url4 = `http://gateway.marvel.com/v1/public/series?ts=1&apikey=${this.api_key}&hash=${this.hash}`;
+  url5 = `http://gateway.marvel.com/v1/public/stories?ts=1&apikey=${this.api_key}&hash=${this.hash}`;
 
  constructor(private http: HttpClient) { }
 
@@ -27,6 +29,16 @@ export class MarvelService {
 
   getEvents(): Observable<any> {
     return this.http.get<any>(this.url3)
+    .pipe(map((data: any) => data.data.results))
+  }
+
+  getSeries(): Observable<any> {
+    return this.http.get<any>(this.url4)
+    .pipe(map((data: any) => data.data.results))
+  }
+
+  getStories(): Observable<any> {
+    return this.http.get<any>(this.url5)
     .pipe(map((data: any) => data.data.results))
   }
 }
