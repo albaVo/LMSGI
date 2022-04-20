@@ -13,5 +13,6 @@ export interface ILibro {
   publisher_date?: string;
   url_details?: string;
   cover?: string;
-  categories?: ICategoria[];
+  categories?: ICategoria;
 }
+

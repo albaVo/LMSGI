@@ -1,12 +1,22 @@
+
+
 div.container {
   display: flex;
   flex-flow: row nowrap;
+
 }
 
-div.container nav {
+div.container  nav {
   width: 20%;
 }
 
 div.container section {
-  width: 80%;
+  width: 80%
+}
+tr {
+  margin-bottom: 5px;
+}
+tr img {
+  height: 70px;
+  border-radius: 10px;
 }

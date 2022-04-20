@@ -1,13 +1,16 @@
+import { LibrosModule } from './libros/libros.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AutoresComponent } from './autores/autores.component';
 import { CategoriasComponent } from './categorias/categorias.component';
 import { LibrosComponent } from './libros/libros.component';
+import { UsuariosComponent } from './usuarios/usuarios.component';
 
 const routes: Routes = [
-  { path: '', component: LibrosComponent },
-  { path: 'autores', component: AutoresComponent },
-  { path: 'categorias', component: CategoriasComponent }
+  { path: 'libros', loadChildren: () => import('./libros/libros.module')
+                          .then(m => m.LibrosModule)},
+  // { path: 'libros', component: LibrosComponent},
+  { path: 'categorias', component: CategoriasComponent},
+  { path: 'users', component: UsuariosComponent }
 ];
 
 @NgModule({
