@@ -10,7 +10,9 @@ const routes: Routes = [
                           .then(m => m.LibrosModule)},
   // { path: 'libros', component: LibrosComponent},
   { path: 'categorias', component: CategoriasComponent},
-  { path: 'users', component: UsuariosComponent }
+  { path: 'users', loadChildren: () => import('./usuarios/usuarios.module')
+                          .then(m=>m.UsuariosModule)},
+  // { path: 'users', component: UsuariosComponent }
 ];
 
 @NgModule({
