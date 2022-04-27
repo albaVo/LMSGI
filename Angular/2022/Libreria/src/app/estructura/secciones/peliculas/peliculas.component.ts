@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IGenero, IPeliculas } from 'src/app/Interfaces/Peliculas';
 import { PeliculasService } from 'src/app/services/peliculas.service';
-import { runInThisContext } from 'vm';
 
 @Component({
   selector: 'app-peliculas',

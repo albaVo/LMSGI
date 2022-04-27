@@ -1,7 +1,35 @@
-<ul class="list-group">
-  <li class="list-group-item">Insertar un Libro</li>
-  <li class="list-group-item">Listar Libros</li>
-  <li class="list-group-item">A third item</li>
-  <li class="list-group-item">A fourth item</li>
-  <li class="list-group-item">And a fifth one</li>
-</ul>
+<p>libros-nav works!</p>
+
+<nav>
+  <li class="list-group-item" >
+    <a class="nav-link"
+        [routerLink]="['/libros', {outlets: {cuerpo: ['new'] }}]">
+      <i class="fa-solid fa-plus"></i> Insertar Libro
+    </a>
+  </li>
+  <li class="list-group">
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Categorias
+    </button>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Autores
+    </button>
+    <div class="collapse" id="collapseExample">
+      <ul *ngIf="categorias" class="list-group">
+        <li *ngFor="let categoria of categorias" class="list-group-item"  >
+          <a class="nav-link"
+            [routerLink]="['/libros', {outlets: {cuerpo: ['list', categoria.category_id, categoria.name] }}]">
+            {{ categoria.name }}
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="listaAutores" id="listaAutores">
+      <ul *ngIf="categorias" class="list-group">
+        <li *ngFor="let autor of autores" class="list-group-item"  >
+          <a class="nav-link">{{ autor }}</a>
+        </li>
+      </ul>
+    </div>
+  </li>
+</nav>
