@@ -6,13 +6,13 @@ main {
 }
 
 main app-main-menu{
-  background-color: red;
+  background-color: none;
   width: 20%;
   min-height: 200px;
 }
 
 main app-main-cuerpo{
-  background-color: yellow;
+  background-color: none;
   width: 60%;
 }
 

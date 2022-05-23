@@ -1,0 +1,28 @@
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: rgb(88, 24, 69);
+  align-items: center;
+  height: 150px;
+}
+
+img {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  margin-left: 60px;
+}
+
+ul {
+  width: 70%;
+}
+
+a.nav-link {
+  color: white;
+  font-family: Roboto Condensed;
+  font-size: 25px;
+  padding: 50px;
+}
+
+a.nav-link:hover {
+  color: rgb(112, 239, 224);
+}

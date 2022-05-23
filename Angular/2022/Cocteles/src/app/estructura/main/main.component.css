@@ -1,0 +1,18 @@
+main {
+  min-height: 500px;
+  background-color: rgba(114, 57, 123, 0.892);
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+main app-main-menu{
+  background-color: rgb(114, 57, 123);
+  width: 30%;
+  min-height: 200px;
+}
+
+main app-main-cuerpo{
+  background-color: white;
+  width: 70%;
+}
+
