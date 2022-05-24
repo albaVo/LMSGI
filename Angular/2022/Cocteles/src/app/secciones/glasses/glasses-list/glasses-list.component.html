@@ -1,1 +1,29 @@
-<p>glasses-list works!</p>
+<div *ngFor="let glass of glassesFilter">
+  <h2>Información detallada del Cóctel {{ glass.strCategory }}</h2>
+  <div class="container">
+    <table class="table-primary">
+      <thead>
+        <th></th>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Categoria</th>
+        <th>Instrucciones</th>
+        <th>Ingredientes:</th>
+        <th>Medidas:</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td> <img src="{{ glass.strDrinkThumb }}"></td>
+          <td> {{ glass.idDrink }} </td>
+          <td> {{ glass.strDrink }} </td>
+          <td> {{ glass.strCategory }} </td>
+          <td> {{ glass.strInstructions }} </td>
+          <td> {{ glass.ingredient }} </td>
+          <td> {{ glass.measure }} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+

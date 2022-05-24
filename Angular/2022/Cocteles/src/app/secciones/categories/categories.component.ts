@@ -7,19 +7,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.css']
 })
-export class CategoriesComponent implements OnInit {
+export class CategoriesComponent {
 
-  allCategories: any[] = [];
+  constructor() {
 
-  constructor(private http: CoctelesService) {
-
-  }
-
-  ngOnInit() {
-    this.http.getAllCategories().subscribe(ret => {
-      this.allCategories = ret;
-      console.log(this.allCategories);
-    })
   }
 
 }

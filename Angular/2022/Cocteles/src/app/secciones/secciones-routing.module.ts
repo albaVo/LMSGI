@@ -1,6 +1,4 @@
-import { IngredientsComponent } from './ingredients/ingredients.component';
 import { GlassesComponent } from './glasses/glasses.component';
-import { CategoriesComponent } from './categories/categories.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LobbyComponent } from './lobby/lobby.component';
@@ -9,8 +7,10 @@ const routes: Routes = [
   { path: 'lobby', component: LobbyComponent, outlet: 'cuerpo' },
   { path: 'categories', loadChildren: () => import('./categories/categories.module')
                               .then(m => m.CategoriesModule)},
-  { path: 'glasses', component: GlassesComponent },
-  { path: 'ingredients', component: IngredientsComponent }
+  { path: 'glasses', loadChildren: () => import('./glasses/glasses.module')
+                              .then(m => m.GlassesModule)},
+  { path: 'ingredients', loadChildren: () => import('./ingredients/ingredients.module')
+                              .then(m => m.IngredientsModule)},
 ];
 
 @NgModule({

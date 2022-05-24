@@ -1,17 +1,20 @@
-<!-- <h2>Listado de Cócteles de la categoria {{ nombre }}</h2>
-<div class="container">
-  <table class="table-primary">
-    <thead>
-      <th>Imagen</th>
-      <th>Codigo</th>
-      <th>Nombre</th>
-    </thead>
-    <tbody>
-      <tr *ngFor="let drink of drinks">
-        <td> <img src="{{ drink.strDrinkThumb }}"></td>
-        <td> {{ drink.idDrink }} </td>
-        <td> {{ drink.strDrink }} </td>
-      </tr>
-    </tbody>
-  </table>
-</div> -->
+<div *ngFor="let category of categoriesFilter">
+  <h2 >Listado de Cócteles de la categoria {{ category.strCategory }}</h2>
+  <div class="container">
+    <table class="table-primary">
+      <thead>
+        <th>Imagen</th>
+        <th>Codigo</th>
+        <th>Nombre</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td> <img src="{{ category.strDrinkThumb }}"></td>
+          <td> {{ category.idDrink }} </td>
+          <td> {{ category.strDrink }} </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

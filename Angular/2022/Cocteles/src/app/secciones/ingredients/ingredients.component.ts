@@ -1,3 +1,4 @@
+import { CoctelesService } from './../../services/cocteles.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IngredientsComponent implements OnInit {
 
-  constructor() { }
+  allIngredients: any[] = [];
 
-  ngOnInit(): void {
+  constructor(private http: CoctelesService) { }
+
+  ngOnInit() {
+    this.http.getAllIngredients().subscribe(ret => {
+      this.allIngredients = ret;
+      console.log(this.allIngredients);
+    })
   }
-
 }

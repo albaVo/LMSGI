@@ -1,3 +1,4 @@
+import { CoctelesService } from './../../../services/cocteles.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesNavComponent implements OnInit {
 
-  constructor() { }
+  allCategories: any[] = [];
 
-  ngOnInit(): void {
+  constructor(private http: CoctelesService) { }
+
+  ngOnInit() {
+    this.http.getAllCategories().subscribe(ret => {
+      this.allCategories = ret;
+      console.log(this.allCategories);
+    })
   }
 
 }

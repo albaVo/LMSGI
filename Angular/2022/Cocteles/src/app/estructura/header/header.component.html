@@ -11,10 +11,10 @@
 
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/lobby/glasses">Glasses</a>
+      <a class="nav-link" [routerLink]="['/glasses', {outlets: { menu: ['sidebar'], cuerpo: ['home'] }}]">Glasses</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" routerLink="/lobby/ingredients">Ingredients</a>
+      <a class="nav-link" [routerLink]="['/ingredients', {outlets: { menu: ['sidebar'], cuerpo: ['home'] }}]">Ingredients</a>
     </li>
   </ul>
 </header>

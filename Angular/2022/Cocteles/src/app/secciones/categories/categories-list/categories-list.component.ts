@@ -1,5 +1,4 @@
 import { CoctelesService } from './../../../services/cocteles.service';
-import { ActivatedRoute, Params } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,23 +6,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './categories-list.component.html',
   styleUrls: ['./categories-list.component.css']
 })
-export class CategoriesListComponent {
+export class CategoriesListComponent implements OnInit{
 
-  // nCat: string = '';
-  // nombre: string = '';
-  // drinks: IDrinks[] = [];
+  categoriesFilter: any[] = [];
 
-  // constructor(private ruta: ActivatedRoute,
-  //             private CoctelesService: CoctelesService) { }
+  constructor(private http: CoctelesService) {}
 
-  // ngOnInit(): void {
-  //   this.ruta.params
-  //     .subscribe ( async (params: Params ) => {
-  //       this.nCat = params['nCat'];
-  //       this.nombre = params['nombre'];
-  //       this.drinks = await this.CoctelesService.getDrinksCategory(this.nCat);
-  //       console.log(this.drinks);
-  //     })
-  // }
-
+  ngOnInit() {
+    // this.http.getCategoriesFilter().subscribe(ret => {
+    //   this.categoriesFilter = ret;
+    //   console.log(this.categoriesFilter);
+    // })
+  }
 }

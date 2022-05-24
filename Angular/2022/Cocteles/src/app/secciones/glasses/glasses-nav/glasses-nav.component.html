@@ -1,1 +1,24 @@
-<p>glasses-nav works!</p>
+<nav>
+  <li class="list-group-item" >
+    <a class="nav-link"
+        [routerLink]="['/glasses', {outlets: {cuerpo: ['new'] }}]">
+      <i class="fa-solid fa-plus"></i> Insertar Cóctel
+    </a>
+  </li>
+  <li class="list-group">
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Lista Cócteles
+    </button>
+    <div class="collapse" id="collapseExample">
+      <ul *ngIf="allGlasses" class="list-group">
+        <li *ngFor="let glass of allGlasses.drinks" class="list-group-item"  >
+          <a class="nav-link"
+            [routerLink]="['/glasses', {outlets: {cuerpo: ['list', glass.idDrink, glass.strDrink] }}]">
+            {{ glass.strDrink }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+</nav>
+

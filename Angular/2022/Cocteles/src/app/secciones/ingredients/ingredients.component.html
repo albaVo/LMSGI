@@ -1,1 +1,8 @@
-<p>ingredients works!</p>
+<div>
+  <h2>Sección de Ingredientes</h2>
+  <p>En esta sección encontrará todos los ingredientes disponibles</p>
+</div>
+
+<ul class="list-group" *ngFor="let ingredient of allIngredients">
+  <li class="list-group-item">{{ ingredient }}</li>
+</ul>

@@ -1,1 +1,9 @@
-<p>ingredients-nav works!</p>
+<nav>
+  <a>
+    <i class="fas fa-search"></i>
+  </a>
+  <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Search Character">
+  <datalist id="datalistOptions">
+    <option *ngFor="let ingredient of allIngredients" value="{{ingredient.strIngredient1}}">
+  </datalist>
+</nav>
