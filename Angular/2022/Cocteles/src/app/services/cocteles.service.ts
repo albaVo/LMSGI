@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
-import { drink, drinks } from '../interfaces/cocteles';
+import { drink, drinks, category } from '../interfaces/cocteles';
 
 
 
@@ -11,6 +11,7 @@ import { drink, drinks } from '../interfaces/cocteles';
 export class CoctelesService {
 
   constructor(private http: HttpClient) {}
+  categorias: drinks = { drinks: [] };
 
   api_list = 'https://www.thecocktaildb.com/api/json/v1/1/list.php';
   api_drink = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php';
@@ -29,15 +30,17 @@ export class CoctelesService {
     )
   }
 
-  // getCategoriesFilter(id:string):Observable<drink>{
-  //   return this.http.get<any>(this.api_filtrar+`?c=${id}`).pipe(
-  //     map(data => {
-  //       let drink:drinks;
-  //       drink=data.drinks[0];
-  //       return drink;
-  //     })
-  //   )
-  // }
+  getCategoriesFilter(id:string):Observable<drinks>{
+    return this.http.get<drinks>(this.api_filtrar+`?c=${id}`).pipe(
+      map(data => {
+
+        console.log(data);
+        // let category:category;
+        // category=data.categories[0];
+        return this.categorias;
+      })
+    )
+  }
 
   getAllIngredients():Observable<string[]> {
     return this.http.get<any>(this.api_list+'?i=list').pipe(
@@ -54,9 +57,6 @@ export class CoctelesService {
     return this.http.get<drinks>(this.api_search+'?s=all').pipe(
       map(data => {
         console.log(data);
-        let glasses = data.drinks.map((x: { idDrink: any; }) => {
-          return x.idDrink;
-        })
         return data;
       })
     )

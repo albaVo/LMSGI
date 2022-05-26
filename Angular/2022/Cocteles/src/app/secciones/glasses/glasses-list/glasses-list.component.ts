@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CoctelesService } from 'src/app/services/cocteles.service';
 import { ActivatedRoute, Params } from '@angular/router';
+import { drink } from 'src/app/interfaces/cocteles';
 
 @Component({
   selector: 'app-glasses-list',
@@ -9,7 +10,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class GlassesListComponent implements OnInit {
 
-  glassesFilter: any[] = [];
+  drink: drink = {};
   idGlass: string = '';
   nameGlass: string = '';
 
@@ -24,12 +25,11 @@ export class GlassesListComponent implements OnInit {
         this.idGlass = parametros ['idGlass'];
         this.nameGlass = parametros ['nameGlass'];
         console.log(this.idGlass, this.nameGlass);
-         this.http.getDrinkById(this.idGlass).subscribe(ret => {
-          console.log(this.glassesFilter);
+         this.http.getDrinkById(this.idGlass)
+         .subscribe( data => {
+            this.drink = data;
         })
-
       })
-
   }
 }
 

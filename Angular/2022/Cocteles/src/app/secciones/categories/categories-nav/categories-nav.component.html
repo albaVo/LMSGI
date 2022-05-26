@@ -1,5 +1,7 @@
-<ul class=".list-group-flush " *ngFor="let category of allCategories">
-  <li class="list-group-item">{{category}}</li>
+<ul class=".list-group-flush" *ngIf="allCategories">
+  <li class="list-group-item" *ngFor="let category of allCategories">
+    <a class="nav-link" [routerLink]="['/categories', {outlets: {cuerpo: ['list', category.strCategory]}}]">{{category}}</a>
+  </li>
 </ul>
 
 

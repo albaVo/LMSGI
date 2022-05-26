@@ -1,5 +1,7 @@
 import { CoctelesService } from './../../../services/cocteles.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { category } from 'src/app/interfaces/cocteles';
 
 @Component({
   selector: 'app-categories-list',
@@ -8,14 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesListComponent implements OnInit{
 
-  categoriesFilter: any[] = [];
+  category: category = {};
+  nameCat: string = '';
 
-  constructor(private http: CoctelesService) {}
+  constructor(private http: CoctelesService,
+              private rutas: ActivatedRoute)
+  {}
 
   ngOnInit() {
-    // this.http.getCategoriesFilter().subscribe(ret => {
-    //   this.categoriesFilter = ret;
-    //   console.log(this.categoriesFilter);
-    // })
+    // this.rutas.params
+    //   .subscribe(async (parametros: Params) => {
+    //     this.nameCat = parametros ['nameCat'];
+    //     console.log(this.nameCat);
+    //       this.http.getCategoriesFilter(this.nameCat)
+    //       .subscribe(data => {
+    //         this.category = data;
+    //     })
+    //   })
   }
 }

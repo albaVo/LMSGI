@@ -1,0 +1,10 @@
+li.list-group-item a {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+button {
+  font-size: 20px;
+  background-color: rgb(58, 105, 190);
+}
+

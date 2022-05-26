@@ -1,0 +1,47 @@
+h2 {
+  color: cornflowerblue;
+  text-align: center;
+  margin: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+div.card {
+  margin: 100px;
+}
+
+img {
+  width: 250px;
+  margin: 10px;
+  margin-left: 35%;
+}
+
+div.card-body h5 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.card-body p {
+  font-size: 18px;
+}
+
+ul li {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+ul li p {
+  padding: 10px;
+  font-size: 18px;
+}
+
+p.title {
+  font-family: cursive;
+
+}
+
+p.text {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(67, 123, 227);
+  font-weight: bold;
+}

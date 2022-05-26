@@ -1,0 +1,31 @@
+h2 {
+  color: rgb(58, 105, 190);
+  text-align: center;
+  margin: 50px;
+  margin-bottom: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+input {
+  background-color: rgba(76, 0, 130, 0.559);
+}
+
+::placeholder {
+  color: white;
+}
+
+textarea {
+  background-color: rgba(76, 0, 130, 0.559);
+}
+
+button {
+  background-color: rgb(58, 105, 190);
+  margin: 30px;
+  margin-left: 48%;
+}
+

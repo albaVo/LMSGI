@@ -1,29 +1,32 @@
-<div *ngFor="let glass of glassesFilter">
-  <h2>Información detallada del Cóctel {{ glass.strCategory }}</h2>
-  <div class="container">
-    <table class="table-primary">
-      <thead>
-        <th></th>
-        <th>Id</th>
-        <th>Nombre</th>
-        <th>Categoria</th>
-        <th>Instrucciones</th>
-        <th>Ingredientes:</th>
-        <th>Medidas:</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td> <img src="{{ glass.strDrinkThumb }}"></td>
-          <td> {{ glass.idDrink }} </td>
-          <td> {{ glass.strDrink }} </td>
-          <td> {{ glass.strCategory }} </td>
-          <td> {{ glass.strInstructions }} </td>
-          <td> {{ glass.ingredient }} </td>
-          <td> {{ glass.measure }} </td>
-        </tr>
-      </tbody>
-    </table>
+<div>
+  <h2>Información detallada del Cóctel:</h2>
+
+ <div class="card" style="width: 50rem;">
+  <img src="{{ drink.strDrinkThumb }}" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">{{ drink.strDrink }}</h5>
+    <p class="card-text">{{ drink.strInstructions }}</p>
   </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+      <p class="title">Categoria: </p>
+      <p class="text">{{ drink.strCategory }}</p>
+    </li>
+    <li class="list-group-item">
+      <p class="title">Ingredientes: </p>
+      <p class="text">{{ drink.strIngredient1 }},{{ drink.strIngredient2 }},{{ drink.strIngredient3 }}</p>
+    </li>
+    <li class="list-group-item">
+      <p class="title">Medidas: </p>
+      <p class="text">{{ drink.strMeasure1 }},{{ drink.strMeasure2 }},{{ drink.strMeasure3 }}</p>
+    </li>
+    <li class="list-group-item">
+      <p class="title"><i class="fas fa-cocktail"></i></p>
+      <p class="text">{{ drink.strAlcoholic }}</p>
+    </li>
+    <li class="list-group-item">
+      <p class="title"><i class="fas fa-hashtag"></i></p>
+      <p class="text">{{ drink.strTags }}</p>
+    </li>
+  </ul>
 </div>
-
-
